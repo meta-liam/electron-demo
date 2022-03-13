@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="./styles.css" rel="stylesheet">
+    <title>electron-demo</title>
+<style>
+  .envBox span{ padding-left: 6px; font-size:14;color: red;}
+  .buttonBox button{ padding-left: 6px;line-height: 150%;}
+  body{font-size: 12px;}
+  .OutBox{overflow-y: scroll;width: 90%; height:250px;border: dashed red;}
+</style>
+  </head>
+  <body>
+    <h1>electron-demo</h1>
+    <div class="envBox">
+      运行环境：<br>
+      Node.js: <span id="node-version"></span>, 
+      Chromium :<span id="chrome-version"></span>, 
+      Electron :<span id="electron-version"></span>
+    </div>
+    <div class="buttonBox">
+      <button id="ts01" >hello</button>
+      <button id="tsCloseWs" >关闭ws</button>    
+      <button id="tsLoadWs" >创建ws</button>
+      <button id="tsSayHello" >hello-world.say</button>
+      <button id="tsGetList" >discovery.getNetList</button>
+    </div>
+
+    <br>
+    输入：<button id="tsSend" >发送</button>
+    <br>
+
+<textarea id="msgInput" rows="5" cols="60">
+  {"jsonrpc":"2.0","method":"say","params":"liam","id":1,"service":"hello-world"}
+</textarea>
+<br>
+输出<br>
+
+<div id="msgOutput" class="OutBox">
+  output..
+</div>
+    <script src="./renderer.js"></script>
+<br>
+操作：点击"创建ws"->点击"hello-world.say"
+<br>
+注意：
+<br>1.要关闭防火墙；
+  </body>
+</html>

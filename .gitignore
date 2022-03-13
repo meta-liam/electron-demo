@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.local
+package-lock.json
+/dist
+/coverage
+/build
+/lib
+/local
+logs
+*.log

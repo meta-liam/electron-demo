@@ -1,0 +1,34 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder --config.asar=false",
+    "app:asar": "electron-builder --config.asar=true"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "liam",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "17.1.1",
+    "electron-builder": "22.14.13"
+  },
+  "build": {
+    "appId": "com.liam.electron01",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
+  "dependencies": {
+  }
+}
