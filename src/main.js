@@ -2,14 +2,14 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
-// function xLinkServer(){
-//   let xlinkpath = path.join(__dirname, './xlink.js');
-//   console.log("xlinkpath=",xlinkpath);
-//   setTimeout(()=>{
-//     const sv = require(xlinkpath);
-//   }
-//   ,10);
-// }
+function loadServer(){
+  let _path = path.join(__dirname, './server.js');
+  console.log("server_path=",_path);
+  setTimeout(()=>{
+    const sv = require(_path);
+  }
+  ,10);
+}
 
 function createWindow () {
   // Create the browser window.
@@ -29,6 +29,7 @@ function createWindow () {
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
   
+  loadServer()
 }
 
 // This method will be called when Electron has finished
